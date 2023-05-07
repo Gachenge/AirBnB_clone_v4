@@ -8,6 +8,8 @@ $('document').ready(function () {
         }
         $('.amenities H4').text(Object.values(amenities).join(', '));
     });
+
+    // getting API status
     $.getJSON("http://0.0.0.0:5001/api/v1/status/", (data) => {
     if (data.status === 'OK') {
         $('#api_status').addClass("available");
